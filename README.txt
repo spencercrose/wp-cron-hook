@@ -12,6 +12,8 @@ Simple WP cron handler via external crontab and WP REST API.
 
 1. Upload zipped version via "Upload Plugin" tool.
 2. Activate the plugin through the 'Plugins' menu in WordPress
+3. WP pods require a NGINX_PURGE_KEY env variable to trigger purges. This is set in the Helm chart for the WP deployment.
+4. The crontab is also configured in the Helm chart. It activates two PHP files: (1) mailpoet-cron.php; and (2) wp-cron.php
 
 == Changelog ==
 
